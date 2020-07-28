@@ -56,4 +56,4 @@ order by count(*) desc;
 SELECT faixa_comissao, sum(salario_fixo)
 from vendedor
 GROUP BY 1
-having sum(salario_fixo) > 6000;
+having sum(salario_fixo) >= 6000;
