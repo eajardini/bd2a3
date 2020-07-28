@@ -26,11 +26,11 @@ GROUP BY num_pedido;
 ou 
 select num_pedido,sum(quantidade), count(quantidade)
 from item_pedido
-GROUP BY 1 asc;
+GROUP BY 1;
 ou 
 select num_pedido,sum(quantidade), count(quantidade)
 from item_pedido
-GROUP BY num_pedido asc;
+GROUP BY num_pedido;
 
 -- ORDERBY001 - Faça uma consulta para um relatório que retorne as descrições do produtos e seus respectivos valores de venda. Ordene de forma ascendente pelo valor de venda.
 select descricao, valor_venda
@@ -41,7 +41,7 @@ select descricao, valor_venda
 from produto
 order by 2;
 
--- ORDERBY002 - Paulo Afonso precisa de um relatório que contenha o código do cliente e a quantidade de pedidos que cada um possui. Utilize a tabela pedido. Mostre ordenado de forma descente pela quantidade de pedidos de cada código do cliente. 
+-- ORDERBY002 - Paulo Afonso precisa de um relatório que contenha o código do cliente e a quantidade de pedidos que cada um possui. Utilize a tabela pedido. Mostre ordenado de forma descendente pela quantidade de pedidos de cada código do cliente. 
 select codigo_cliente, count(*)
 from pedido
 GROUP BY 1
